@@ -1,0 +1,148 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Dashboard Title -->
+    <TextView
+        android:id="@+id/dashboardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="30sp"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/primary_text"/>
+
+    <!-- Real-Time Statistics -->
+    <LinearLayout
+        android:id="@+id/realTimeStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/dashboardTitle">
+
+        <!-- Speed Circular Progress -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:gravity="center">
+
+            <!-- Circular Progress Indicator -->
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/circularSpeedIndicator"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:progress="0"
+                app:indicatorColor="@color/accent"
+                app:indicatorSize="140dp"
+                app:trackColor="@color/secondary_text"
+                app:trackThickness="20dp" />
+
+            <!-- Speed Text Overlay -->
+            <TextView
+                android:id="@+id/speedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="0 km/h"
+                android:textColor="@color/primary_text"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+        <!-- Other items can be added similarly -->
+    </LinearLayout>
+
+    <!-- Total Violations Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_below="@id/realTimeStats"
+        android:radius="8dp"
+        android:backgroundTint="@color/secondary_accent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/totalViolationsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Violations: 2"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/primary_text"/>
+
+            <TextView
+                android:id="@+id/lastViolationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Violation: Red Light"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/primary_text"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Floating Action Button for Live Tracking -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLiveTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_live_tracking"
+        android:backgroundTint="@color/accent"/>
+
+    <!-- Floating Action Button with Notification Badge for History -->
+    <FrameLayout
+        android:id="@+id/historyBadgeFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_history"
+            android:backgroundTint="@color/accent"/>
+
+        <!-- Notification Badge -->
+        <TextView
+            android:id="@+id/historyBadgeCount"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="top|end"
+            android:background="@drawable/ic_notification"
+            android:text="3"
+            android:elevation="10dp"
+            android:textColor="@color/primary_text"
+            android:gravity="center"
+            android:textSize="10sp"/>
+    </FrameLayout>
+
+    <!-- Floating Action Button for Settings -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_notification"
+        android:backgroundTint="@color/accent"/>
+</RelativeLayout>

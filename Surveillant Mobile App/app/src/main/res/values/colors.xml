@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_text">#EEEEEE</color>
+    <color name="secondary_text">#222831</color>
+    <color name="accent">#00ADB5</color>
+    <color name="secondary_accent">#393E46</color>
+</resources>

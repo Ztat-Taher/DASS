@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back Button"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Violation Detail"
+            android:textSize="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/primary_text"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <!-- Violation Info Section -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/secondary_text">
+
+            <TextView
+                android:id="@+id/violationTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type: Red Light Violation"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:id="@+id/violationTimestampTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: 2024-12-03 14:45"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Location Section -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/secondary_accent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Location"
+                android:layout_gravity="center"
+                android:textColor="@color/primary_text"
+                android:textSize="20dp" />
+
+            <org.osmdroid.views.MapView
+                android:id="@+id/ivMapPreview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:contentDescription="Map Preview"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

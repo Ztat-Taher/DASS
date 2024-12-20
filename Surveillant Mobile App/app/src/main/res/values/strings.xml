@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DASS Surveillance</string>
+    <string name="violation_details">Violation Details</string>
+    <string name="view_full_map">View Full Map</string>
+    <string name="report">Report</string>
+    <string name="type">Type</string>
+    <string name="date">Date</string>
+    <string name="speed">Speed</string>
+    <string name="location">Location</string>
+    <string name="back_button_description">Back Button</string>
+    <string name="map_preview_description">Map Preview</string>
+    <string name="violation_image_description">Violation Image</string>
+</resources>
