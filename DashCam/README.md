@@ -19,7 +19,7 @@ Contributions are welcome! Open an issue or a pull request for suggestions or bu
 ---
 
 ## 📬 **Contact**
-- Email: ztat.taher@example.com  
+- Email: ztattaher@example.com  
 - LinkedIn: [Ztat Taher](https://www.linkedin.com/in/ztat-taher/)
 
 ---
