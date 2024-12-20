@@ -1,0 +1,7 @@
+train: C:\Users\ztatt\Documents\School\SEM3\Younsi\ADAS\yolov5-master\models\Signboard\train\images
+val: C:\Users\ztatt\Documents\School\SEM3\Younsi\ADAS\yolov5-master\models\Signboard\valid\images
+test: C:\Users\ztatt\Documents\School\SEM3\Younsi\ADAS\yolov5-master\models\Signboard\test\images
+
+
+nc: 14
+names: ['speedlimit_05', 'speedlimit_10', 'speedlimit_100', 'speedlimit_110', 'speedlimit_120', 'speedlimit_130', 'speedlimit_15', 'speedlimit_30', 'speedlimit_40', 'speedlimit_50', 'speedlimit_60', 'speedlimit_70', 'speedlimit_80', 'speedlimit_90']

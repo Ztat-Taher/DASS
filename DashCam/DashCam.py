@@ -10,9 +10,9 @@ from flask import Flask, Response
 model_general = torch.hub.load('ultralytics/yolov5', 'yolov5n')
 
 # Load the custom-trained model for speed sign detection
-model_speed_sign = torch.hub.load(r"C:\Users\ztatt\Documents\School\SEM3\Younsi\ADAS\yolov5-master", 
+model_speed_sign = torch.hub.load(r"yolov5-master", 
                                   'custom', 
-                                  path=r"C:\Users\ztatt\Documents\School\SEM3\Younsi\ADAS\yolov5-master\runs\train\sign_detection_model4\weights\best.pt", 
+                                  path=r"yolov5-master\runs\train\sign_detection_model\weights\best.pt", 
                                   source='local')
 
 # Initialize EasyOCR reader
